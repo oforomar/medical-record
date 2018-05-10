@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Patient = require('../models/patient');
+const PatientModel = require('../models/patient');
 
 // patients
 
@@ -12,8 +12,9 @@ router.get('/patients', function(request, response){
 
 // add new patient to database
 router.post('/patients', function(request, response){
-    Patient.create(request.body);
-    response.send({type: 'POST'});
+    PatientModel.create(request.body).then(function(success){
+        response.send(success);
+    });
 });
 
 

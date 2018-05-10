@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-require('mongoose-type-email');
 
 // create patient Schema
 const PatientSchema = new Schema({
@@ -9,13 +8,13 @@ const PatientSchema = new Schema({
         required: [true, 'Cannot create paient without name']
     },
     email:{
-        type: mongoose.SchemaTypes.email,
+        type: String,
         required: [true]
     }
 });
 
 // create model(collection)
-const Patient = mongoose.model('patient', PatientSchema);
+const PatientModel = mongoose.model('patient', PatientSchema);
 
 // export for use in app
-module.exports = Patient;
+module.exports = PatientModel;

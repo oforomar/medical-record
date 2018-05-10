@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // connect to mongo db
-mongoose.connect('mongodb://localhost/record');
+mongoose.connect('mongodb://medrecordb:pBjpCISesNXthdcnLqeFroeOcS3kTEav4zRImImJVcMNR8uCDKTocc6ZiTvgonuRRpoof4gb0D5ezxjaFnAdDw%3D%3D@medrecordb.documents.azure.com:10255/?ssl=true');
 mongoose.Promise = global.Promise;
 
 // to use the routes set up in api
