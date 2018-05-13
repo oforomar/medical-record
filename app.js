@@ -15,7 +15,8 @@ app.get('/', function(req, res, next){
 app.use(bodyParser.json());
 
 // connect to mongo db
-mongoose.connect('mongodb://medrecordb:pBjpCISesNXthdcnLqeFroeOcS3kTEav4zRImImJVcMNR8uCDKTocc6ZiTvgonuRRpoof4gb0D5ezxjaFnAdDw%3D%3D@medrecordb.documents.azure.com:10255/?ssl=true');
+//mongoose.connect('mongodb://medrecordb:pBjpCISesNXthdcnLqeFroeOcS3kTEav4zRImImJVcMNR8uCDKTocc6ZiTvgonuRRpoof4gb0D5ezxjaFnAdDw%3D%3D@medrecordb.documents.azure.com:10255/?ssl=true');
+mongoose.connect('mongodb://localhost/record');
 mongoose.Promise = global.Promise;
 
 // to use the routes set up in api
