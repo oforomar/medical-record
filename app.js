@@ -5,6 +5,13 @@ const mongoose = require('mongoose');
 // set up express app
 const app = express();
 
+app.use(express.static('UI'));
+
+// UI
+app.get('/', function(req, res, next){
+    res.sendFile(__dirname +'/UI/Text.html');
+});
+
 app.use(bodyParser.json());
 
 // connect to mongo db

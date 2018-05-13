@@ -1,0 +1,15 @@
+.container{
+    width:30%;
+    height:20%;
+        
+}
+body{
+    
+   background-color:#99ff99; 
+}
+#carouselExampleIndicators{
+    background-color:#736d5c;
+}
+.d-block w-100 {
+    background-color:rgba(2,2,2,0.7)
+}
